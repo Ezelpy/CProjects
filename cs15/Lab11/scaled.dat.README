@@ -1,0 +1,33 @@
+
+
+scaled.dat.README
+
+
+This file explains the how the original data in input.dat was manipulated
+to obtain the data in scaled.dat.
+
+The minimum, maximum, and spread of each set of data was found.
+
+	min	max	range
+Test 1	4.3	21.5	17.2
+Test 2	3.8	15.5	11.7
+Test 3	180	595	415
+
+Then the following formula was applied to each data value:
+
+	val = (val - min) * 1000 / range
+
+Thus modifying each data set to have a minumum value of 0, a maximum value
+of 1000, and (obviously) a range of 1000.
+
+All of this was done by using the program scale.cpp.
+
+There are 5 fields of data per line in scaled.dat.  The first field is the
+patient identification number, which was not changed from the original 
+data file.   The second, third, and fourth field are the scaled outcomes
+of the three tests.  Those tests are FPG, HbA1c, and FSM respectively.
+The fifth field indicates which of the following three categories that 
+the patient is a part of: 
+	N - Normal
+	I - IGT (pre-diabetic)
+	D - Type 2 Diabetic
